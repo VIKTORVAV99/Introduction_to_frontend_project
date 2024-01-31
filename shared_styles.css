@@ -1,0 +1,44 @@
+:root {
+  --color-primary: #3a71aa;
+  --color-secondary: #3e79b5;
+  --color-secondary-with-opacity: rgba(62, 121, 181, 0.5);
+  --color-background: #f8f8f8;
+}
+
+* {
+  font-family: open-sans, sans-serif;
+  margin: 0;
+  height: 100%;
+  background-color: var(--color-background);
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+header {
+  align-items: start;
+
+  width: 100%;
+  background-color: var(--color-primary);
+  height: 3rem;
+}
+
+nav {}
+
+footer {
+  width: 100%;
+  height: 3rem;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

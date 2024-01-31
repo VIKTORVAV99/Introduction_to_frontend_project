@@ -1,0 +1,59 @@
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80%;
+}
+
+main h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0;
+  height: max-content;
+  width: max-content;
+}
+
+#voice {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: 2em;
+}
+
+#voice #record {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+  border-color: transparent;
+  align-self: center;
+}
+
+#text {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 2rem;
+}
+
+#transcribed-output {
+  border-radius: 0.5rem;
+  background-color: var(--color-secondary-with-opacity);
+
+  border-color: transparent;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  overflow-y: scroll;
+}
+
+
+.language-selector {
+  width: max-content;
+  height: max-content;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
