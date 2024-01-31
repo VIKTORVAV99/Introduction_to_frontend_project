@@ -3,6 +3,7 @@
   --color-secondary: #3e79b5;
   --color-secondary-with-opacity: rgba(62, 121, 181, 0.5);
   --color-background: #f8f8f8;
+  --color-hover: #4dc5f5;
 }
 
 * {

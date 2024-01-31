@@ -11,7 +11,7 @@ main h2 {
   margin-bottom: 2rem;
   padding: 0;
   height: max-content;
-  width: max-content;
+  width: 100%;
 }
 
 #voice {
@@ -28,30 +28,73 @@ main h2 {
   background-color: var(--color-secondary);
   border-color: transparent;
   align-self: center;
+  max-width: 150px;
+  max-height: 150px;
 }
+
+#voice #record:hover {
+  background-color: var(--color-hover);
+}
+
 
 #text {
   display: flex;
   flex-direction: column;
   width: 75%;
-  margin: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  height: min-content;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: min-content
+}
+
+#text div button {
+  border-radius: 0.5rem;
+  border-color: transparent;
+  background-color: var(--color-secondary);
+  height: 48px;
+  width: 66px;
+}
+
+#text div button img {
+  height: 24px;
+  background-color: transparent;
+  aspect-ratio: 1;
 }
 
 #transcribed-output {
   border-radius: 0.5rem;
-  background-color: var(--color-secondary-with-opacity);
-
   border-color: transparent;
   padding: 1rem;
   font-size: 1.5rem;
   color: white;
   overflow-y: scroll;
+  border-color: black;
+  resize: none;
 }
 
-.language-selector {
+.selector {
   width: max-content;
-  height: max-content;
+  height: 48px;
+  min-height: 48px;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
   padding: 0.5rem;
+  border-color: transparent;
+  background-color: var(--color-secondary);
 }

@@ -27,38 +27,41 @@
       <!-- Voice section -->
       <section id="voice">
         <h2>Record voice</h2>
-        <select
-          id="language-selector-voice"
-          class="language-selector"
-          title="Select voice language"
-        >
-          <option value="en">English</option>
-          <option value="fr">French</option>
-          <option value="es">Spanish</option>
-          <option value="de">German</option>
-          <option value="it">Italian</option>
-          <option value="sv">Swedish</option>
-        </select>
-        <button id="record">Record</button>
+        <div class="container">
+          <div class="row">
+            <select id="language-selector-voice" class="selector" title="Select voice language">
+              <option value="en">English</option>
+              <option value="fr">French</option>
+              <option value="es">Spanish</option>
+              <option value="de">German</option>
+              <option value="it">Italian</option>
+              <option value="sv">Swedish</option>
+            </select>
+          </div>
+        </div>
+          <button id="record">Record</button>
       </section>
 
       <!-- Text section -->
       <section id="text">
         <h2>Transcribed text</h2>
-        <select
-          id="language-selector-text"
-          class="language-selector"
-          title="Select text language"
-        >
-          <option value="en">English</option>
-          <option value="fr">French</option>
-          <option value="es">Spanish</option>
-          <option value="de">German</option>
-          <option value="it">Italian</option>
-          <option value="sv">Swedish</option>
-        </select>
+        <div class="container">
+          <div class="row">
+            <select id="language-selector-text" class="selector" title="Select text language">
+              <option value="en">English</option>
+              <option value="fr">French</option>
+              <option value="es">Spanish</option>
+              <option value="de">German</option>
+              <option value="it">Italian</option>
+              <option value="sv">Swedish</option>
+            </select>
+            <button class="selector" title="Download text">
+              <img src="/assets/download.svg" alt="Download" />
+            </button>
+          </div>
+        </div>
         <!-- Text area for the transcribed output -->
-        <textarea id="transcribed-output" title="Transcribed text"></textarea>
+        <textarea id="transcribed-output" title="Transcribed text" disabled></textarea>
       </section>
     </main>
 
