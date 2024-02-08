@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -36,59 +36,50 @@
 
     <!-- Main content section -->
     <main>
+      <h1><em>Record and transcribe</em></h1>
       <!-- Voice section -->
-      <section id="voice">
-        <h2>Record voice</h2>
-        <div class="container">
-          <div class="row">
-            <select
-              id="language-selector-voice"
-              class="selector"
-              title="Select voice language"
-            >
-              <option value="en">English</option>
-              <option value="fr">French</option>
-              <option value="es">Spanish</option>
-              <option value="de">German</option>
-              <option value="it">Italian</option>
-              <option value="sv">Swedish</option>
-            </select>
+      <div id="main_container">
+        <section id="voice">
+          <h2>Record voice</h2>
+          <div class="container">
+            <div class="row">
+              <select id="language-selector-voice" class="selector" title="Select voice language">
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="es">Spanish</option>
+                <option value="de">German</option>
+                <option value="it">Italian</option>
+                <option value="sv">Swedish</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="container column center">
-          <button id="record">Record</button>
-        </div>
-      </section>
+          <div class="container column center">
+            <button id="record">Record</button>
+          </div>
+        </section>
 
-      <!-- Text section -->
-      <section id="text">
-        <h2>Transcribed text</h2>
-        <div class="container">
-          <div class="row">
-            <select
-              id="language-selector-text"
-              class="selector"
-              title="Select text language"
-            >
-              <option value="en">English</option>
-              <option value="fr">French</option>
-              <option value="es">Spanish</option>
-              <option value="de">German</option>
-              <option value="it">Italian</option>
-              <option value="sv">Swedish</option>
-            </select>
-            <button class="selector" title="Download text">
-              <img src="/assets/download.svg" alt="Download" />
-            </button>
+        <!-- Text section -->
+        <section id="text">
+          <h2>Transcribed text</h2>
+          <div class="container">
+            <div class="row">
+              <select id="language-selector-text" class="selector" title="Select text language">
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="es">Spanish</option>
+                <option value="de">German</option>
+                <option value="it">Italian</option>
+                <option value="sv">Swedish</option>
+              </select>
+              <button class="selector" title="Download text">
+                <img src="/assets/download.svg" alt="Download" />
+              </button>
+            </div>
           </div>
-        </div>
-        <!-- Text area for the transcribed output -->
-        <textarea
-          id="transcribed-output"
-          title="Transcribed text"
-          disabled
-        ></textarea>
-      </section>
+          <!-- Text area for the transcribed output -->
+          <textarea id="transcribed-output" title="Transcribed text" disabled></textarea>
+        </section>
+      </div>
     </main>
 
     <!-- Footer section -->
