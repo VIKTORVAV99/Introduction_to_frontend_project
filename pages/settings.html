@@ -1,40 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Settings | Project</title>
-    <link rel="stylesheet" href="/shared_styles.css" />
-    <link rel="stylesheet" href="settings.css" />
-    <script src="/functions.js" defer></script>
-  </head>
-  <body>
-    <!-- Header section -->
-    <header>
-      <button
-        id="hamburger_toggle"
-        type="button"
-        onclick="hamburger_toggle()"
-        title="Toggle hamburger menu"
-      >
-        <img src="/assets/menu.svg" alt="" />
-      </button>
-      <div id="hamburger">
-        <nav>
-          <a href="/pages/home.html">
-            <img src="/assets/logo.png" alt="logo" />
-          </a>
 
-          <ul class="nav-links">
-            <li><a href="/pages/history.html">Previous recordings</a></li>
-            <li><a href="/pages/settings.html">Settings</a></li>
-            <li><a href="/pages/legal.html">Legal</a></li>
-          </ul>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings | Project</title>
+  <link rel="stylesheet" href="/shared_styles.css" />
+  <link rel="stylesheet" href="settings.css" />
+  <script src="/functions.js" defer></script>
+</head>
+
+<body>
+  <!-- Header section -->
+  <header>
+    <button id="hamburger_toggle" type="button" onclick="hamburger_toggle()" title="Toggle hamburger menu">
+      <img src="/assets/menu.svg" alt="" />
+    </button>
+    <div id="hamburger">
+      <nav>
+        <a href="/pages/home.html">
+          <img src="/assets/logo.png" alt="logo" />
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="/pages/history.html">Previous recordings</a></li>
+          <li><a href="/pages/settings.html">Settings</a></li>
+          <li><a href="/pages/legal.html">Legal</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1 id="Settings">Settings</h1>
+    <h2 id="Account">Account</h2>
+    <div>
+      <label id="Useraname">Username</label>
+      <input type="text" name="epostadress" id="mailruta" title="epostadress" />
+    </div>
+    <div>
+      <label id="changepassword">Change Password:</label>
+      <input type="text" name="changepassword" id="changepassword" title="changepassword" />
+    </div>
+    <div id="button-container">
+      <a type="button" href="#">Enter</a>
+    </div>
+    <div>
+      <label id="newpassword">Enter a new selected password:</label>
+      <input type="text" name="newpassword" id="first-newpassword" title="newpassword" />
+    </div>
+    <div>
+      <input type="text" name="newpassword" id="second-newpassword" title="newpassword" />
+      <div id="button-container">
+        <a type="button" href="#">Enter</a>
       </div>
-    </header>
-    <main>
-      <h1 id="Settings">Settings</h1>
-    </main>
-  </body>
+    </div>
+
+  </main>
+</body>
+
 </html>
