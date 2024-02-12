@@ -10,7 +10,7 @@ body {
   padding: 0;
   background-color: #3a71aa;
   color: hsl(0, 0%, 100%);
-  font-family: sans-serif;
+  font-family: open-sans, sans-serif;
   font-size: 1rem;
   display: flex;
   flex-direction: column;
@@ -19,8 +19,9 @@ body {
 }
 
 img {
+  margin-top: 200px;
   width: 200px;
-  object-fit: cover;
+  object-fit: contain;
   margin-bottom: 50px;
 }
 
