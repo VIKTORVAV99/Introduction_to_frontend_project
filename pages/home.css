@@ -56,6 +56,9 @@ header {
 }
 
 #voice #record {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
@@ -67,6 +70,12 @@ header {
 
 #voice #record:hover {
   background-color: var(--color-hover);
+}
+
+#voice #record img {
+  height: 90px;
+  aspect-ratio: 1;
+  background-color: transparent;
 }
 
 #text {
