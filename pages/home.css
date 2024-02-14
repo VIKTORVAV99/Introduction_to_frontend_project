@@ -44,7 +44,6 @@ header {
   min-width: 200px;
   max-width: 300px;
 }
-
 #voice_container {
   margin-top: 80px;
   display: flex;
@@ -53,6 +52,28 @@ header {
   justify-content: start;
   width: 100%;
   height: 100%;
+}
+
+.language-selector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 10rem;
+  max-width: 150px;
+}
+
+.language-selector select {
+  all: unset;
+  background-color: inherit;
+  border: none;
+  color: white;
+}
+
+.language-selector img {
+  height: 1.5rem;
+  aspect-ratio: 1;
+  background-color: transparent;
 }
 
 #voice #record {
