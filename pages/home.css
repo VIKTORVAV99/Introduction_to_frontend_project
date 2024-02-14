@@ -36,8 +36,13 @@ header {
 #voice {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 25%;
   margin: 2em;
+}
+
+#voice_container {
+  
 }
 
 #voice #record {
@@ -46,10 +51,8 @@ header {
   border-radius: 50%;
   background-color: var(--color-secondary);
   border-color: transparent;
-  align-self: center;
   max-width: 150px;
   max-height: 150px;
-  margin: auto;
 }
 
 #voice #record:hover {
@@ -101,13 +104,13 @@ header {
 }
 
 #transcribed-output {
-  border-radius: 0.5rem;
+  border-width: 1px;
   border-color: transparent;
   padding: 1rem;
   font-size: 1.5rem;
-  color: white;
+  background-color: white;
   overflow-y: scroll;
-  border-color: black;
+  border-color: #6c6a6a;
   resize: none;
 }
 
