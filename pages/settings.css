@@ -1,64 +1,96 @@
-main {
-    height: min-content;
+section {
+  height: min-content;
+  margin-bottom: 2rem;
 }
 
-#Settings {
-    text-align: center;
-    height: min-content;
+#settings {
+  text-align: center;
+  height: min-content;
+  margin-bottom: 4rem;
 }
 
-#Account {
-    height: min-content;
+#main_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 70%;
 }
 
-#mailruta
-
-/* Anpassa storleken på textrutan */
-    {
-    width: 252px;
-    height: 39px;
-    font-size: 16px;
+#main_wrapper > section {
+  width: 30vw;
 }
 
-#changepassword
-
-/* Anpassa storleken på textrutan */
-    {
-    width: 252px;
-    height: 39px;
-    font-size: 16px;
+#divider {
+  border-left: 1px solid #000;
+  align-self: flex-start;
+  height: 95%;
+  align-self: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
-
-
-
-#button-container a {
-    border-radius: 20px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    width: 145px;
-    height: 47px;
-    background: var(--color-secondary);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bolder;
+h2 {
+  margin-bottom: 2rem;
 }
 
-#first-newpassword
-
-/* Anpassa storleken på textrutan */
-    {
-    width: 252px;
-    height: 39px;
-    font-size: 16px;
+h3 {
+  min-width: max-content;
+  margin-right: 1rem;
 }
 
-#second-newpassword {
-    width: 252px;
-    height: 39px;
-    font-size: 16px;
+#password_form,
+#username_form,
+#language_form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  height: min-content;
+  min-width: 280px;
+  max-width: 282px;
+}
+
+#password_form label,
+#username_form label,
+#language_form label {
+  width: max-content;
+  margin-right: 1rem;
+}
+
+#password_form input,
+#username_form input,
+#language_form select {
+  padding: unset;
+  background-color: #fff;
+  min-width: 100%;
+  max-width: 280px;
+  height: 2rem;
+  width: inherit;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1rem;
+  border-color: #6c6a6a;
+  border-width: 1px;
+}
+
+#password_form #current_password {
+  margin-bottom: 3rem;
+}
+
+#password_form button,
+#language_form button {
+  width: max-content;
+  padding: 0.5rem;
+  border: 1px solid #6c6a6a;
+  margin-top: 1rem;
+  align-self: center;
+  background-color: #305d8c;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
 }

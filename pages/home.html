@@ -64,21 +64,26 @@
         <section id="text">
           <div class="container">
             <div class="row">
-            <div class="row selector language-selector">
-              <img src="/assets/translate.svg" alt="translation icon" />
-              <select id="language-selector-text" title="Select voice language">
-                <option value="en">English</option>
-                <option value="fr">French</option>
-                <option value="es">Spanish</option>
-                <option value="de">German</option>
-                <option value="it">Italian</option>
-                <option value="sv">Swedish</option>
-              </select>
-              <img src="/assets/expand_more.svg" alt="expand" />
-            </div>
-              <button class="selector" title="Download text">
-                <img src="/assets/download.svg" alt="Download" />
-              </button>
+              <div class="row selector language-selector">
+                <img src="/assets/translate.svg" alt="translation icon" />
+                <select id="language-selector-text" title="Select voice language">
+                  <option value="en">English</option>
+                  <option value="fr">French</option>
+                  <option value="es">Spanish</option>
+                  <option value="de">German</option>
+                  <option value="it">Italian</option>
+                  <option value="sv">Swedish</option>
+                </select>
+                <img src="/assets/expand_more.svg" alt="expand" />
+              </div>
+              <div class="row w-min">
+                <button class="selector" id="share" title="Share text">
+                  <img src="/assets/ios_share.svg" alt="ios share" />
+                </button>
+                <button class="selector" title="Download text">
+                  <img src="/assets/download.svg" alt="Download" />
+                </button>
+              </div>
             </div>
           </div>
           <!-- Text area for the transcribed output -->
