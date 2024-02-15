@@ -59,7 +59,7 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  width: 10rem;
+  width: 15rem;
   max-width: 150px;
 }
 
