@@ -44,6 +44,7 @@ header {
   min-width: 200px;
   max-width: 300px;
 }
+
 #voice_container {
   margin-top: 80px;
   display: flex;
@@ -59,8 +60,8 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  width: 10rem;
-  max-width: 150px;
+  width: max-content;
+  padding: 0;
 }
 
 .language-selector select {
@@ -68,10 +69,12 @@ header {
   background-color: inherit;
   border: none;
   color: white;
+  width: 87px;
 }
 
 .language-selector img {
-  height: 1.5rem;
+  height: 24px;
+  padding: 8px;
   aspect-ratio: 1;
   background-color: transparent;
 }
@@ -103,6 +106,8 @@ header {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
 }
 
 .container {
@@ -152,11 +157,18 @@ header {
 
 .selector {
   width: max-content;
-  height: 48px;
-  min-height: 48px;
+  height: 45px;
+  min-height: 45px;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
-  padding: 0.5rem;
   border-color: transparent;
   background-color: var(--color-secondary);
+}
+
+.w-min {
+  width: min-content;
+}
+
+#share {
+  margin-right: 1rem;
 }
