@@ -40,11 +40,14 @@
       <!-- Voice section -->
       <div id="main_container">
         <section id="history">
-          <select name="sort" id="sort" class="selector">
-            <option value="date">Date</option>
-            <option value="language">Language</option>
-            <option value="duration">Duration</option>
-          </select>
+          <div class="row selector language-selector">
+            <img src="/assets/sort.svg" alt="sort icon" />
+            <select name="sort" id="sort" title="sort">
+              <option value="date">Date</option>
+              <option value="language">Language</option>
+              <option value="duration">Duration</option>
+            </select>
+          </div>
           <div id="history_container">
             <div class="history_item">
               <h4>Title</h4>
