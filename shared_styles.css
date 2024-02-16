@@ -40,7 +40,7 @@ main {
 
 #hamburger_toggle {
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   height: 72px;
   width: 72px;
   border: none;
@@ -56,6 +56,7 @@ main {
 #hamburger {
   position: fixed;
   display: none;
+  z-index: 990;
 }
 
 #hamburger nav {
