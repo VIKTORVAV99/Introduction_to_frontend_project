@@ -3,7 +3,7 @@ function hamburger_toggle() {
   const panel = document.getElementById("hamburger");
   if (panel.style.display === "block") {
     panel.style.display = "none";
-    toggle.style.backgroundColor = "inherit";
+    toggle.style.backgroundColor = "transparent";
   } else {
     panel.style.display = "block";
     toggle.style.backgroundColor = "var(--color-primary)";
