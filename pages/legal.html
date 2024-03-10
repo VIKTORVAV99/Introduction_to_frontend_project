@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,12 +6,18 @@
     <title>Legal | Project</title>
     <link rel="stylesheet" href="/shared_styles.css" />
     <link rel="stylesheet" href="legal.css" />
-    <script src="/functions.js" defer></script>
+    <!-- The defer attribute tells the browser to only execute the script after the document has been parsed. -->
+    <!-- This is important because the script is manipulating the DOM and we need the DOM to be fully loaded before we start doing that. -->
+    <script src="/menu.js" defer></script>
   </head>
   <body>
     <!-- Header section -->
     <header>
-      <button id="hamburger_toggle" onclick="hamburger_toggle()" title="Toggle hamburger menu">
+      <button
+        id="hamburger_toggle"
+        onclick="hamburger_toggle()"
+        title="Toggle hamburger menu"
+      >
         <img src="/assets/menu.svg" alt="" />
       </button>
       <div id="hamburger">
@@ -42,7 +48,8 @@
         <div class="container">
           <p>Privacy policy</p>
           <div class="containerblue blue2">
-            Practices with respect to personal information we collect from or about you.
+            Practices with respect to personal information we collect from or
+            about you.
           </div>
         </div>
 

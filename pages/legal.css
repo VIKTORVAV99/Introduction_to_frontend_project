@@ -30,7 +30,9 @@ h1 {
   height: 478px;
   background: #ffffffff;
   border-radius: 4px; /* border-m */
-  box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f; /* shadow-xs */
+  box-shadow:
+    0px 0px 1px #171a1f,
+    0px 0px 2px #171a1f; /* shadow-xs */
   font-size: 30px;
   font-family: "Inter";
 }
@@ -45,7 +47,9 @@ h1 {
   width: 320px;
   height: 186px;
   border-radius: 2px; /* border-xs */
-  box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f; /* shadow-xs */
+  box-shadow:
+    0px 0px 1px #171a1f,
+    0px 0px 2px #171a1f; /* shadow-xs */
   font-size: 20px;
   font-family: "Inter";
 }
