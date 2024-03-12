@@ -1,6 +1,5 @@
-const OPENAI_WHISPER_ENDPOINT =
-  "https://api.openai.com/v1/audio/transcriptions";
-const OPENAI_GPT4_ENDPOINT = "https://api.openai.com/v1/assistants";
+const OPENAI_WHISPER_ENDPOINT = "https://api.openai.com/v1/audio/transcriptions";
+const OPENAI_GPT4_ENDPOINT = "https://api.openai.com/v1/chat/completions";
 
 // This token will be revoked after the project has been graded or after the 3rd of April 2024.
 const OPENAI_API_KEY = "";
@@ -10,7 +9,7 @@ const output_language = document.getElementById("language-selector-text").value;
 const input_language = document.getElementById("language-selector-voice").value;
 
 // The system prompt that will be used to post-process the transcription.
-const SYSTEM_PROMPT = `You are a helpful assistant that translates the text to the language with the designation ${output_language} adds punctuation to text. Preserve the original words and only insert necessary punctuation such as periods, commas, capialization, symbols like dollar sings or percentage signs, and formatting. Use only the context provided. If there is no context provided say, 'No context provided'`;
+const SYSTEM_PROMPT = `You are a helpful assistant that translates the text to the language with the designation ${output_language} adds punctuation to text.`;
 
 // Call the OpenAI API to get a whisper response
 /**
@@ -83,7 +82,7 @@ async function recordAudio() {
   mediaRecorder.addEventListener("stop", async () => {
     console.debug("Recording stopped");
     const audioBlob = new Blob(audioChunks);
-
+    output_box.innerText = "Transcribing...";
     const response = await callWhisperAPI(audioBlob);
     const data = await response.json();
 
@@ -92,7 +91,7 @@ async function recordAudio() {
     // For optimal results the API should be called with a longer audio clip
     // and post-processing should be done with GPT-4 to improve the transcription.
     //const postProcessedResponse = await postProcessTranscription(data?.text);
-    //const data = await postProcessedResponse.json();
+    //const processedData = await postProcessedResponse.json()?.choices[0]?.message?.content;
 
     outputBox.innerText = data?.text;
   });
@@ -102,10 +101,10 @@ async function recordAudio() {
   button.addEventListener("click", () => {
     if (mediaRecorder.state === "inactive") {
       mediaRecorder.start();
-      button.innerText = "Stop";
+      button.children[0].src = "/assets/mic.svg";
     } else {
       mediaRecorder.stop();
-      button.innerText = "Record";
+      button.children[0].src = "/assets/mic-off.svg";
     }
   });
 
