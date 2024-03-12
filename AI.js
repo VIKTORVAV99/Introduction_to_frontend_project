@@ -1,4 +1,5 @@
-const OPENAI_WHISPER_ENDPOINT = "https://api.openai.com/v1/audio/transcriptions";
+const OPENAI_WHISPER_ENDPOINT =
+  "https://api.openai.com/v1/audio/transcriptions";
 const OPENAI_GPT4_ENDPOINT = "https://api.openai.com/v1/chat/completions";
 
 // This token will be revoked after the project has been graded or after the 3rd of April 2024.
@@ -75,7 +76,7 @@ async function recordAudio() {
     stream = await navigator.mediaDevices.getUserMedia({ audio: true });
   } catch (error) {
     alert(
-      "Could not access the device microphone. Please allow access to the microphone and refresh the page."
+      "Could not access the device microphone. Please allow access to the microphone and refresh the page.",
     );
     console.error("Could not access the device microphone: ", error);
   }

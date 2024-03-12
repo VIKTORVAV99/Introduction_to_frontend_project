@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,7 +14,11 @@
   <body>
     <!-- Header section -->
     <header>
-      <button id="hamburger_toggle" onclick="hamburger_toggle()" title="Toggle hamburger menu">
+      <button
+        id="hamburger_toggle"
+        onclick="hamburger_toggle()"
+        title="Toggle hamburger menu"
+      >
         <img src="../assets/menu.svg" alt="" />
       </button>
       <div id="hamburger">
@@ -40,11 +44,14 @@
       <h1>Record and transcribe</h1>
       <!-- Voice section -->
       <div id="main_container">
-        <section id="voice">
+        <div id="voice">
           <div id="voice_container" class="container column center">
             <div class="row selector language-selector">
               <img src="../assets/translate.svg" alt="translation icon" />
-              <select id="language-selector-voice" title="Select voice language">
+              <select
+                id="language-selector-voice"
+                title="Select voice language"
+              >
                 <option value="en">English</option>
                 <option value="fr">French</option>
                 <option value="es">Spanish</option>
@@ -58,16 +65,19 @@
               <img src="../assets/mic.svg" alt="record" />
             </button>
           </div>
-        </section>
+        </div>
         <!-- Vertical divider -->
         <div id="divider"></div>
         <!-- Text section -->
-        <section id="text">
+        <div id="text">
           <div class="container">
             <div class="row">
               <div class="row selector language-selector">
                 <img src="../assets/translate.svg" alt="translation icon" />
-                <select id="language-selector-text" title="Select voice language">
+                <select
+                  id="language-selector-text"
+                  title="Select voice language"
+                >
                   <option value="en">English</option>
                   <option value="fr">French</option>
                   <option value="es">Spanish</option>
@@ -88,8 +98,12 @@
             </div>
           </div>
           <!-- Text area for the transcribed output, it is disabled so the user can't write text on their own. -->
-          <textarea id="transcribed-output" title="Transcribed text" disabled></textarea>
-        </section>
+          <textarea
+            id="transcribed-output"
+            title="Transcribed text"
+            disabled
+          ></textarea>
+        </div>
       </div>
     </main>
 
