@@ -70,7 +70,15 @@ async function postProcessTranscription(transcription) {
  * @returns {MediaRecorder} The MediaRecorder object used for recording audio.
  */
 async function recordAudio() {
-  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+  let stream;
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+  } catch (error) {
+    alert(
+      "Could not access the device microphone. Please allow access to the microphone and refresh the page."
+    );
+    console.error("Could not access the device microphone: ", error);
+  }
   const mediaRecorder = new MediaRecorder(stream);
   const audioChunks = [];
 
@@ -83,17 +91,22 @@ async function recordAudio() {
     console.debug("Recording stopped");
     const audioBlob = new Blob(audioChunks);
     output_box.innerText = "Transcribing...";
-    const response = await callWhisperAPI(audioBlob);
-    const data = await response.json();
+    try {
+      const response = await callWhisperAPI(audioBlob);
+      const data = await response.json();
 
-    // This code is commented out because the returned value from the Whisper API is crap and cant be translated in a good way.
+      // This code is commented out because the returned value from the Whisper API is crap and cant be translated in a good way.
 
-    // For optimal results the API should be called with a longer audio clip
-    // and post-processing should be done with GPT-4 to improve the transcription.
-    //const postProcessedResponse = await postProcessTranscription(data?.text);
-    //const processedData = await postProcessedResponse.json()?.choices[0]?.message?.content;
+      // For optimal results the API should be called with a longer audio clip
+      // and post-processing should be done with GPT-4 to improve the transcription.
+      //const postProcessedResponse = await postProcessTranscription(data?.text);
+      //const processedData = await postProcessedResponse.json()?.choices[0]?.message?.content;
 
-    outputBox.innerText = data?.text;
+      output_box.innerText = data?.text;
+    } catch (error) {
+      console.error("Error while calling the API: ", error);
+      output_box.innerText = "An error occurred while transcribing the audio.";
+    }
   });
 
   const button = document.getElementById("record");
@@ -101,10 +114,10 @@ async function recordAudio() {
   button.addEventListener("click", () => {
     if (mediaRecorder.state === "inactive") {
       mediaRecorder.start();
-      button.children[0].src = "/assets/mic.svg";
+      button.children[0].src = "../assets/stop.svg";
     } else {
       mediaRecorder.stop();
-      button.children[0].src = "/assets/mic-off.svg";
+      button.children[0].src = "../assets/mic.svg";
     }
   });
 
