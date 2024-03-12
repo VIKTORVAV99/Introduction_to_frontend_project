@@ -1,39 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Project</title>
-    <link rel="stylesheet" href="/shared_styles.css" />
+    <link rel="stylesheet" href="../shared_styles.css" />
     <link rel="stylesheet" href="home.css" />
     <!-- The defer attribute tells the browser to only execute the script after the document has been parsed. -->
     <!-- This is important because the script is manipulating the DOM and we need the DOM to be fully loaded before we start doing that. -->
-    <script src="/menu.js" defer></script>
-    <script src="/AI.js" defer></script>
+    <script src="../menu.js" defer></script>
+    <script src="../AI.js" defer></script>
   </head>
   <body>
     <!-- Header section -->
     <header>
-      <button
-        id="hamburger_toggle"
-        onclick="hamburger_toggle()"
-        title="Toggle hamburger menu"
-      >
-        <img src="/assets/menu.svg" alt="" />
+      <button id="hamburger_toggle" onclick="hamburger_toggle()" title="Toggle hamburger menu">
+        <img src="../assets/menu.svg" alt="" />
       </button>
       <div id="hamburger">
         <nav>
-          <a href="/pages/home.html">
-            <img src="/assets/logo.png" alt="logo" />
+          <a href="../pages/home.html">
+            <img src="../assets/logo.png" alt="logo" />
           </a>
           <ul class="nav-links">
-            <li><a href="/pages/home.html">Home</a></li>
-            <li><a href="/pages/history.html">Previous recordings</a></li>
-            <li><a href="/pages/settings.html">Settings</a></li>
-            <li><a href="/pages/legal.html">Legal</a></li>
+            <li><a href="../pages/home.html">Home</a></li>
+            <li><a href="../pages/history.html">Previous recordings</a></li>
+            <li><a href="../pages/settings.html">Settings</a></li>
+            <li><a href="../pages/legal.html">Legal</a></li>
           </ul>
           <div class="button-container">
-            <a class="bg-white" href="/index.html">Sign Out</a>
+            <a class="bg-white" href="../index.html">Sign Out</a>
           </div>
         </nav>
       </div>
@@ -47,11 +43,8 @@
         <section id="voice">
           <div id="voice_container" class="container column center">
             <div class="row selector language-selector">
-              <img src="/assets/translate.svg" alt="translation icon" />
-              <select
-                id="language-selector-voice"
-                title="Select voice language"
-              >
+              <img src="../assets/translate.svg" alt="translation icon" />
+              <select id="language-selector-voice" title="Select voice language">
                 <option value="en">English</option>
                 <option value="fr">French</option>
                 <option value="es">Spanish</option>
@@ -59,10 +52,10 @@
                 <option value="it">Italian</option>
                 <option value="sv">Swedish</option>
               </select>
-              <img src="/assets/expand_more.svg" alt="expand" />
+              <img src="../assets/expand_more.svg" alt="expand" />
             </div>
             <button id="record" data-recording="false">
-              <img src="/assets/mic.svg" alt="record" />
+              <img src="../assets/mic.svg" alt="record" />
             </button>
           </div>
         </section>
@@ -73,11 +66,8 @@
           <div class="container">
             <div class="row">
               <div class="row selector language-selector">
-                <img src="/assets/translate.svg" alt="translation icon" />
-                <select
-                  id="language-selector-text"
-                  title="Select voice language"
-                >
+                <img src="../assets/translate.svg" alt="translation icon" />
+                <select id="language-selector-text" title="Select voice language">
                   <option value="en">English</option>
                   <option value="fr">French</option>
                   <option value="es">Spanish</option>
@@ -85,24 +75,20 @@
                   <option value="it">Italian</option>
                   <option value="sv">Swedish</option>
                 </select>
-                <img src="/assets/expand_more.svg" alt="expand" />
+                <img src="../assets/expand_more.svg" alt="expand" />
               </div>
               <div class="row w-min">
                 <button class="selector" id="share" title="Share text">
-                  <img src="/assets/ios_share.svg" alt="ios share" />
+                  <img src="../assets/ios_share.svg" alt="ios share" />
                 </button>
                 <button class="selector" title="Download text">
-                  <img src="/assets/download.svg" alt="Download" />
+                  <img src="../assets/download.svg" alt="Download" />
                 </button>
               </div>
             </div>
           </div>
           <!-- Text area for the transcribed output, it is disabled so the user can't write text on their own. -->
-          <textarea
-            id="transcribed-output"
-            title="Transcribed text"
-            disabled
-          ></textarea>
+          <textarea id="transcribed-output" title="Transcribed text" disabled></textarea>
         </section>
       </div>
     </main>
